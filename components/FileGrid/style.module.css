@@ -11,3 +11,38 @@
     border: 1px solid var(--border-color);
     border-radius: 6px;
 }
+
+.filePreview {
+    height: calc(100% - 2.5rem);
+    display: flex;
+    align-items: center;
+}
+
+.filePreview>svg {
+    font-size: 4rem;
+    margin: auto;
+}
+
+.fileInfo {
+    height: 2.5rem;
+}
+
+.fileItem {
+    padding: .8rem;
+    color: var(--text-black-color);
+}
+
+.fileName {
+    font-weight: 500;
+}
+
+.fileDateModify {
+    text-align: center;
+    font-size: .8rem;
+}
+
+.fileDateModify, .fileName {
+    white-space: nowrap;
+    overflow: hidden;
+    text-overflow: ellipsis;
+}
