@@ -1,34 +1,30 @@
-This is a [Next.js](https://nextjs.org/) project bootstrapped with [`create-next-app`](https://github.com/vercel/next.js/tree/canary/packages/create-next-app).
+# TFileStorage - FrontEnd
 
-## Getting Started
+A little project to save a file in disk and information like name in database. Like 'dropbox' site.  
+You can make download, update file name, upload a new file, get all files, get specific file information and delete a file.  
 
-First, run the development server:
+This project is not being done as a final product, so it should not be used in production.
 
-```bash
-npm run dev
-# or
-yarn dev
-```
+### BackEnd
+ BackEnd project: [link to Backend Project!](https://github.com/faidertms/file-storage-expressjs)
 
-Open [http://localhost:3000](http://localhost:3000) with your browser to see the result.
+### :construction::construction_worker: Under Construction :exclamation:  
 
-You can start editing the page by modifying `pages/index.js`. The page auto-updates as you edit the file.
+## This project use :sparkles: 
+:heavy_check_mark: Javascript(ES6+)    
+:heavy_check_mark: TypeScript   
+:heavy_check_mark: React  
+:heavy_check_mark: Next.JS  
 
-[API routes](https://nextjs.org/docs/api-routes/introduction) can be accessed on [http://localhost:3000/api/hello](http://localhost:3000/api/hello). This endpoint can be edited in `pages/api/hello.js`.
+## Things to be made :clipboard:  
+:heavy_check_mark: Jest(Unit testing)
+:heavy_check_mark: CI  
+:heavy_check_mark: Context API  
 
-The `pages/api` directory is mapped to `/api/*`. Files in this directory are treated as [API routes](https://nextjs.org/docs/api-routes/introduction) instead of React pages.
+## Run Project
+sudo npm install   
+sudo npm run migrate  
+sudo npm run dev    
 
-## Learn More
-
-To learn more about Next.js, take a look at the following resources:
-
-- [Next.js Documentation](https://nextjs.org/docs) - learn about Next.js features and API.
-- [Learn Next.js](https://nextjs.org/learn) - an interactive Next.js tutorial.
-
-You can check out [the Next.js GitHub repository](https://github.com/vercel/next.js/) - your feedback and contributions are welcome!
-
-## Deploy on Vercel
-
-The easiest way to deploy your Next.js app is to use the [Vercel Platform](https://vercel.com/import?utm_medium=default-template&filter=next.js&utm_source=create-next-app&utm_campaign=create-next-app-readme) from the creators of Next.js.
-
-Check out our [Next.js deployment documentation](https://nextjs.org/docs/deployment) for more details.
+## Run Test
+sudo npm test  

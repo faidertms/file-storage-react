@@ -1,0 +1,13 @@
+.fileGrid {
+    padding: 3rem;
+    display: grid;
+    grid-template-columns: repeat(auto-fill, minmax(220px, 1fr));
+    gap: 1rem;
+}
+
+.fileItem {
+    min-height: 200px;
+    max-width: 100%;
+    border: 1px solid var(--border-color);
+    border-radius: 6px;
+}

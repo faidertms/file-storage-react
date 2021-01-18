@@ -1,0 +1,55 @@
+.actionBar {
+    display: flex;
+    flex-wrap: wrap;
+    background-color: var(--actionbar-color);
+    border-bottom: 1px solid var(--border-color);
+    padding: 0 1.5rem;
+}
+
+.uploadButton {
+    width: 5rem;
+}
+
+.downloadButton {
+    width: 6rem;
+}
+
+.removeButton {
+    width: 6rem;
+}
+
+.uploadButton>input {
+    display: none;
+}
+
+.uploadButton>button, .downloadButton>button, .removeButton>button {
+    height: 100%;
+    padding: .6rem .5rem;
+    color: var(--text-black-color);
+    font-size: .9rem;
+    border: none;
+    background-color: inherit;
+    cursor: pointer;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.uploadButton>button:focus, .downloadButton>button:focus, .removeButton>button:focus, .uploadButton>button:hover, .downloadButton>button:hover, .removeButton>button:hover {
+    background-color: var(--hover-button-actionbar-color);
+    outline: none;
+    background-color: var(--hover-button-actionbar-color);
+}
+
+.uploadButton>button>svg, .downloadButton>button>svg, .removeButton>button>svg {
+    margin-right: 2px;
+    font-size: 1rem;
+    color: var(--header-color)
+}
+
+@media (max-width: 640px) {
+    .actionBar {
+        justify-content: center;
+        align-items: center;
+    }
+}
