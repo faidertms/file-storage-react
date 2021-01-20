@@ -1,16 +1,17 @@
 
 import styles from './style.module.css';
-import { File } from './FileItem/types';
 import FileItem from './FileItem';
-interface Props {
-    files: Array<File>
-}
+import { FileContext } from '../../contexts/File';
+import { useContext } from 'react';
 
-export default function FileGrid({ files }: Props) {
+
+export default function FileGrid() {
+
+    const { files, selected, setSelected } = useContext(FileContext);
     return (
         <div className={styles.fileGrid}>
             {files.map(file => (
-                <FileItem {...file} onClick={ } />
+                <FileItem {...file} onClick={setSelected} selected={selected === file.id} />
             ))}
         </div>
     )

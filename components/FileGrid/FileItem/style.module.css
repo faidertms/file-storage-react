@@ -3,6 +3,14 @@
     max-width: 100%;
     border: 1px solid var(--border-color);
     border-radius: 6px;
+    padding: .8rem;
+    color: var(--text-black-color);
+    cursor: pointer;
+}
+
+.fileSelected {
+    border-color: var(--file-selected-border-color);
+    background-color: var(--file-selected-background-color);
 }
 
 .filePreview {
@@ -12,17 +20,13 @@
 }
 
 .filePreview>svg {
+    color: var(--header-color);
     font-size: 4rem;
     margin: auto;
 }
 
 .fileInfo {
     height: 2.5rem;
-}
-
-.fileItem {
-    padding: .8rem;
-    color: var(--text-black-color);
 }
 
 .fileName {

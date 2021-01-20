@@ -4,12 +4,19 @@ import { AiFillFile } from 'react-icons/Ai';
 import { File } from './types';
 
 interface Props extends File {
-    onClick: (id: number) => void
+    selected: boolean,
+    onClick: (id: number) => void,
 }
 
-export default function FileItem({ onClick, originalname, updated_at, id }: Props) {
+export default function FileItem({
+    onClick,
+    selected,
+    originalname,
+    updated_at,
+    id
+}: Props) {
     return (
-        <div className={styles.fileItem} onClick={() => onClick(id)}>
+        <div className={`${styles.fileItem} ${selected ? styles.fileSelected : ''}`} onClick={() => onClick(id)}>
             <div className={styles.filePreview}>
                 <AiFillFile />
             </div>

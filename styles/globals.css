@@ -17,6 +17,8 @@ a {
   --header-color: #0F766E;
   --actionbar-color: #F0FDFA;
   --border-color: #edebe9;
-  --hover-button-actionbar-color:rgba(0,0,0,.12);
+  --file-selected-border-color: #0F766E;
+  --file-selected-background-color: #0f766d10;
+  --hover-button-actionbar-color: rgba(0, 0, 0, .12);
   --text-black-color: rgb(32, 31, 30);
 }
