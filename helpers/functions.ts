@@ -13,7 +13,7 @@ export const create_UUID = (): string => {
 function buildFormData(formData: FormData, data: any, parentKey: string = "") {
     if (data && typeof data === 'object' && !(data instanceof Date) && !(data instanceof File)) {
         Object.keys(data).forEach(key => {
-            buildFormData(formData, data[key], parentKey ? `${parentKey}[${key}]` : key);
+            buildFormData(formData, data[key], parentKey ? `${parentKey}[]` : key);
         });
     } else {
         const value = (data == null) ? '' : data;

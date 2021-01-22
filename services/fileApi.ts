@@ -15,16 +15,14 @@ export type ErrorValue = {
 
 export type Response<T> = {
     message: string | Array<string>,
-    values?: T,
+    values: T,
     code: number,
 }
 
-export type PostFileRequest = {
-
-}
+const baseURL: string = "http://127.0.0.1:8000/api";
 
 export const fileApi: AxiosInstance = axios.create({
-    baseURL: 'http://127.0.0.1:8000/api',
+    baseURL: baseURL,
     timeout: 240000,
     headers:
     {
@@ -45,7 +43,7 @@ export const getFile = async (id: number): Promise<AxiosResponse<Response<File>>
 }
 
 export const downloadFile = (id: number): void => {
-    window.open(`/file/${id}/download`, '_blank');
+    window.open(`${baseURL}/file/${id}/download`, '_blank');
 }
 
 export const storeFile = async (files: FileList): Promise<AxiosResponse<Response<File[]>>> => {

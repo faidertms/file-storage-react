@@ -19,12 +19,15 @@ This project is not being done as a final product, so it should not be used in p
 ## Things to be made :clipboard:  
 :heavy_check_mark: Jest(Unit testing)
 :heavy_check_mark: CI  
-:heavy_check_mark: Context API  
+:heavy_check_mark: Edit filename
+:heavy_check_mark: Confirmation modal
+:heavy_check_mark: Hide buttons when no files are selected
+:heavy_check_mark: handle errors
+:heavy_check_mark: put images in Readme.md
 
 ## Run Project
-sudo npm install   
-sudo npm run migrate  
+sudo npm install    
 sudo npm run dev    
 
-## Run Test
+## Run Test(TO DO :construction_worker:)
 sudo npm test  

@@ -11,7 +11,7 @@ export default function FileGrid() {
     return (
         <div className={styles.fileGrid}>
             {files.map(file => (
-                <FileItem {...file} onClick={setSelected} selected={selected === file.id} />
+                <FileItem {...file} onClick={() => setSelected(file.id)} selected={selected === file.id} key={file.id} />
             ))}
         </div>
     )
