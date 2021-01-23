@@ -21,4 +21,5 @@ a {
   --file-selected-background-color: #0f766d10;
   --hover-button-actionbar-color: rgba(0, 0, 0, .12);
   --text-black-color: rgb(32, 31, 30);
+  --background-modal: #9b9a9a78;
 }
