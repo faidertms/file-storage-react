@@ -1,6 +1,6 @@
 
 import styles from './style.module.css';
-import { AiFillFile } from 'react-icons/Ai';
+import { AiFillFile } from 'react-icons/ai';
 import { File } from './types';
 
 interface Props extends File {
