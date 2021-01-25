@@ -27,3 +27,10 @@ export function jsonToFormData(data: object, metodo: string) {
     buildFormData(formData, data);
     return formData;
 };
+
+export function getFileExtension(filename: string): { fileName: string, fileExtension: string } {
+    let ext = /^.+\.([^.]+)$/.exec(filename);
+    const fileExtension: string = ext ? `.${ext[1]}` : '';
+    const fileName: string = ext ? ext[0].replace(fileExtension, '') : '';
+    return { fileName, fileExtension };
+}

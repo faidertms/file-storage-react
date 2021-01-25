@@ -17,11 +17,9 @@ This project is not being done as a final product, so it should not be used in p
 :heavy_check_mark: Next.JS  
 
 ## Things to be made :clipboard:  
-:heavy_check_mark: Jest(Unit testing)
+:heavy_check_mark: Jest(Unit testing) & Enzyme
 :heavy_check_mark: CI  
-:heavy_check_mark: Edit filename
 :heavy_check_mark: Confirmation modal
-:heavy_check_mark: Hide buttons when no files are selected
 :heavy_check_mark: handle errors
 :heavy_check_mark: put images in Readme.md
 

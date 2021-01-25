@@ -6,23 +6,27 @@
     padding: 0 1.5rem;
 }
 
-.uploadButton {
+/* .uploadButton {
     width: 5rem;
 }
 
 .downloadButton {
-    width: 6rem;
+    width: 6.1rem;
 }
 
 .removeButton {
     width: 6rem;
 }
 
+.renameButton {
+    width: 5rem;
+} */
+
 .uploadButton>input {
     display: none;
 }
 
-.uploadButton>button, .downloadButton>button, .removeButton>button {
+.uploadButton>button, .downloadButton>button, .removeButton>button, .renameButton>button {
     height: 100%;
     padding: .6rem .5rem;
     color: var(--text-black-color);
@@ -35,13 +39,12 @@
     align-items: center;
 }
 
-.uploadButton>button:focus, .downloadButton>button:focus, .removeButton>button:focus, .uploadButton>button:hover, .downloadButton>button:hover, .removeButton>button:hover {
+.uploadButton>button:focus, .downloadButton>button:focus, .renameButton>button:focus, .removeButton>button:focus, .uploadButton>button:hover, .downloadButton>button:hover, .removeButton>button:hover, .renameButton>button:hover {
     background-color: var(--hover-button-actionbar-color);
     outline: none;
-    background-color: var(--hover-button-actionbar-color);
 }
 
-.uploadButton>button>svg, .downloadButton>button>svg, .removeButton>button>svg {
+.uploadButton>button>svg, .downloadButton>button>svg, .renameButton>button>svg, .removeButton>button>svg {
     margin-right: 2px;
     font-size: 1rem;
     color: var(--header-color)

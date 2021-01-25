@@ -5,18 +5,19 @@ import { File } from './types';
 
 interface Props extends File {
     selected: boolean,
-    onClick: (id: number) => void,
+    setSelected: (id: number) => void,
 }
 
 export default function FileItem({
-    onClick,
+    setSelected,
     selected,
     originalname,
     updated_at,
     id
-}: Props) {
+}: Props): JSX.Element {
+    const onClick = () => setSelected(id);
     return (
-        <div className={`${styles.fileItem} ${selected ? styles.fileSelected : ''}`} onClick={() => onClick(id)}>
+        <div className={`${styles.fileItem} ${selected ? styles.fileSelected : ''}`} onClick={onClick}>
             <div className={styles.filePreview}>
                 <AiFillFile />
             </div>

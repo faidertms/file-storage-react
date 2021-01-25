@@ -1,18 +1,21 @@
-
 import React, { useState, createContext, useEffect } from "react";
 import { File } from "../../components/FileGrid/FileItem/types";
 import * as api from "../../services/fileApi";
-
 interface IFileContext {
     loading: boolean,
-    selected?: number,
-    files: Array<File>
+    isUploadButtonVisible: boolean,
+    isDeleteButtonVisible: boolean,
+    isRenameButtonVisible: boolean,
+    isDownloadButtonVisible: boolean,
+    selected: number,
+    selectedFile?: File,
+    files: Array<File>,
     setSelected: (id: number) => void,
-    setLoading: (loading: boolean) => void
-    uploadFile: (files: FileList) => Promise<void>
-    updateFile: (originalname: string) => Promise<void>
-    deleteFile: () => Promise<void>
-    downloadFile: () => void
+    setLoading: (loading: boolean) => void,
+    uploadFile: (files: FileList) => Promise<void>,
+    updateFile: (originalname: string) => Promise<void>,
+    deleteFile: () => Promise<void>,
+    downloadFile: () => void,
 };
 
 interface ProviderProps {
@@ -27,13 +30,18 @@ export const FileContext = createContext<IFileContext>({
     deleteFile: async () => { },
     downloadFile: () => { },
     loading: false,
-    selected: undefined,
+    isUploadButtonVisible: true,
+    isDeleteButtonVisible: false,
+    isRenameButtonVisible: false,
+    isDownloadButtonVisible: false,
+    selected: 0, // is False
+    selectedFile: undefined,
     files: []
 });
 
 export const FileContextProvider = ({ children }: ProviderProps): JSX.Element => {
     const [files, setFiles] = useState<Array<File>>([]);
-    const [selected, setSelected] = useState<number>();
+    const [selected, setSelected] = useState<number>(0);
     const [loading, setLoading] = useState<boolean>(false);
 
     const uploadFile = async (files: FileList): Promise<void> => {
@@ -69,10 +77,11 @@ export const FileContextProvider = ({ children }: ProviderProps): JSX.Element =>
             try {
                 setLoading(true);
                 await api.deleteFile(selected);
-                const fileIndex = files.findIndex(element => {console.log([element.id, selected]); return element.id === selected });
+                const fileIndex = files.findIndex(element => { console.log([element.id, selected]); return element.id === selected });
                 const updatedFiles = files.slice();
                 updatedFiles.splice(fileIndex, 1);
                 setFiles(updatedFiles);
+                setSelected(0);
             } catch (error) {
                 //TODO - Type and Error handle
                 console.log(error)
@@ -102,11 +111,20 @@ export const FileContextProvider = ({ children }: ProviderProps): JSX.Element =>
         initFiles();
     }, []);
 
+    const isUploadButtonVisible = true;
+    const isDownloadButtonVisible = selected ? true : false;
+    const isDeleteButtonVisible = selected ? true : false;
+    const isRenameButtonVisible = selected ? true : false;
+
     return (
         <FileContext.Provider value={{
             files,
             selected,
             loading,
+            isUploadButtonVisible,
+            isRenameButtonVisible,
+            isDeleteButtonVisible,
+            isDownloadButtonVisible,
             setSelected,
             setLoading,
             uploadFile,
