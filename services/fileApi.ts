@@ -19,7 +19,7 @@ export type Response<T> = {
     code: number,
 }
 
-const baseURL: string = "http://127.0.0.1:8000/api";
+const baseURL: string = process.env.fileAPI ?? "";
 
 export const fileApi: AxiosInstance = axios.create({
     baseURL: baseURL,
