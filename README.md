@@ -5,27 +5,28 @@ You can make download, update file name, upload a new file, get all files, get s
 
 This project is not being done as a final product, so it should not be used in production.
 
-### BackEnd
- BackEnd project: [link to Backend Project!](https://github.com/faidertms/file-storage-expressjs)
-
-### :construction::construction_worker: Under Construction :exclamation:  
+### Back-End
+ Back-End project: [link to Back-end Project!](https://github.com/faidertms/file-storage-expressjs)
 
 ## This project use :sparkles: 
 :heavy_check_mark: Javascript(ES6+)    
 :heavy_check_mark: TypeScript   
 :heavy_check_mark: React  
 :heavy_check_mark: Next.JS  
-
-## Things to be made :clipboard:  
-:heavy_check_mark: Jest(Unit testing) & Enzyme
+## Things to be made :clipboard::construction::construction_worker: 
+:heavy_check_mark: Jest(Unit testing) & Enzyme  
 :heavy_check_mark: CI  
-:heavy_check_mark: Confirmation modal
-:heavy_check_mark: handle errors
-:heavy_check_mark: put images in Readme.md
+:heavy_check_mark: Confirmation modal  
+:heavy_check_mark: Handle errors  
+:heavy_check_mark: Put images or Link in Readme.md  
 
 ## Run Project
-sudo npm install    
-sudo npm run dev    
+npm install   
+npm run dev  
+OR  
+npm install    
+npm run build  
+npm start  
 
 ## Run Test(TO DO :construction_worker:)
 sudo npm test  
