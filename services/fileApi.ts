@@ -19,7 +19,7 @@ export type Response<T> = {
     code: number,
 }
 
-const baseURL: string = process.env.fileAPI ?? "";
+const baseURL: string = process.env.NEXT_PUBLIC_FILEAPI ?? "";
 
 export const fileApi: AxiosInstance = axios.create({
     baseURL: baseURL,
