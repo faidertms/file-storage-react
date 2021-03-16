@@ -5,6 +5,10 @@ You can make download, update file name, upload a new file, get all files, get s
 
 This project is not being done as a final product, so it should not be used in production.
 
+Demo: [http://tfilestorage.thiagotms.tech](http://tfilestorage.thiagotms.tech) !  
+Demo-api: [http://api-tfilestorage.thiagotms.tech/api/file](http://api-tfilestorage.thiagotms.tech/api/file) !  
+Docs-api: [http://api-tfilestorage.thiagotms.tech/api/docs](http://api-tfilestorage.thiagotms.tech/api/docs) !  
+
 ### Back-End
  Back-End project: [link to Back-end Project!](https://github.com/faidertms/file-storage-expressjs)
 
@@ -18,7 +22,6 @@ This project is not being done as a final product, so it should not be used in p
 :heavy_check_mark: CI  
 :heavy_check_mark: Confirmation modal  
 :heavy_check_mark: Handle errors  
-:heavy_check_mark: Put images or Link in Readme.md  
 
 ## Run Project
 npm install   
